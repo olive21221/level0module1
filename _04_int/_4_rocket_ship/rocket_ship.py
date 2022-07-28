@@ -1,17 +1,17 @@
+import turtle
 from tkinter import *
 
 window_width = 800
 window_height = 800
 root = Tk()
 
-canvas = Canvas(root, width=window_width, height=window_height, borderwidth=0, highlightthickness=0, bg="#000050")
+canvas = Canvas(root, width=window_width, height=window_height, borderwidth=0, highlightthickness=0, bg="black")
 canvas.grid()
-
 
 # This code runs whenever the mouse is clicked on the window
 def mouse_pressed(event):
     # Draws a dark blue background
-    canvas.create_rectangle(0, 0, window_width, window_height, fill="#000050")
+    canvas.create_rectangle(0, 0, window_width, window_height, fill="black")
 
     # x and y will be equal to the mouse pointer's x and y location
     x = event.x
@@ -24,7 +24,10 @@ def mouse_pressed(event):
     
     # 1. Add details to your rocket to make it look better. You can look at
     #    rocket.png for inspiration.
-    
+    canvas.create_rectangle(x+35, y+400, x-35, y+100, fill="red", outline="")
+    canvas.create_oval(x+20, y+200, x-20, y+150, fill="yellow", outline="")
+    canvas.create_oval(x+20, y+250, x-20, y+300, fill="yellow", outline="")
+
     # 2. Modify the locations of the shapes above so the rocket will be drawn
     #    where the mouse is clicked
     
