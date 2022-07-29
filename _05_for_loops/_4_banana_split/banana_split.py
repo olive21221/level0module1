@@ -22,12 +22,22 @@ Text Rendering Example:
 canvas.create_text(100, 50, text="text goes here", font=("Arial", 16))
 '''
 # Put your code below
+# def mouse_pressed(event):
+#
+#     x = event.x
+#     y = event.y
+#
+#     if x == 1:
 
-def create_text(param):
-    pass
+y=50
+for i in range (4):
+    y += 25
 
-    for i in range (3):
-        create_text('ice cream')
+    if i==3:
+        ice= "banana"
+    else:
+        ice= "ice cream"
+    canvas.create_text(100, y, text=ice, font=("Arial", 16))
 
 
 
